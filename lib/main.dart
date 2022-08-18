@@ -11,27 +11,63 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        home: Builder(
+            builder: (context) => Scaffold(
+                body: Column(children: [
+                  Center(
+                    child: Image(
+                      image: NetworkImage(
+                          'https://previews.123rf.com/images/kalinavova/kalinavova0911/kalinavova091100049/5837009-a-very-beautiful-sunny-sky-background.jpg?fj=1'),
+                    ),
+                  ),
+                  Center(
+                    child: Image(
+                      image: AssetImage(
+                          'images/repository-open-graph-template.png'),
+                    ),
+                  ),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SecondScreen()),
+                        );
+                      },
+                      child: const Text('GO TO Second Screen'),
+                    ),
+                  ),
+                ]),
+                backgroundColor: Colors.red,
+                appBar: AppBar(
+                  title: const Text('Hello Word'),
+                  backgroundColor: Colors.blueGrey[900],
+                ))));
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  const SecondScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-          body:Column(
-            children:[
-              Center(
-                child: Image(
-                  image: NetworkImage('https://previews.123rf.com/images/kalinavova/kalinavova0911/kalinavova091100049/5837009-a-very-beautiful-sunny-sky-background.jpg?fj=1'),
-                ),
-              ),
-              Center(
-                child: Image(
-                  image: AssetImage('images/repository-open-graph-template.png'),
-                ),
-              ),
-            ]
-          ),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.blue,
           appBar: AppBar(
-           title: Text('Hello Word'),
-          backgroundColor: Colors.blueGrey[900],
-        )
-      )
+            title: const Text('Second Screen'),
+            backgroundColor: Colors.red,
+          ),
+          body: SafeArea(
+            child: Container(
+                height: 100.0,
+                width: 200.0,
+                margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 100.0),
+                padding: EdgeInsets.all(30.0),
+                color: Colors.amberAccent,
+                child: const Text('BOO!!!!!!!!!!!')),
+          )),
     );
   }
 }
