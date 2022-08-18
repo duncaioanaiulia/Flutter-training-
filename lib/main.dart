@@ -60,13 +60,28 @@ class SecondScreen extends StatelessWidget {
             backgroundColor: Colors.red,
           ),
           body: SafeArea(
-            child: Container(
-                height: 100.0,
-                width: 200.0,
-                margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 100.0),
-                padding: EdgeInsets.all(30.0),
-                color: Colors.amberAccent,
-                child: const Text('BOO!!!!!!!!!!!')),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Container(
+                    height: double.infinity,
+                    width: 100,
+                    margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+                    padding: EdgeInsets.all(30.0),
+                    color: Colors.amberAccent,
+                    child: const Text('BOO!!!!!!!!!!!')),
+                SizedBox(
+                  width: 20.0,
+                ),
+                Container(
+                    height: double.infinity,
+                    width: 100,
+                    margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+                    padding: EdgeInsets.all(30.0),
+                    color: Colors.deepOrangeAccent,
+                    child: const Text('BOO  22!!!!!!!!!!!')),
+              ],
+            ),
           )),
     );
   }
