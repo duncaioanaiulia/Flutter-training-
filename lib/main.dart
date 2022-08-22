@@ -66,20 +66,33 @@ class SecondScreen extends StatelessWidget {
                 Container(
                     height: double.infinity,
                     width: 100,
-                    margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+                    margin:
+                        EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
                     padding: EdgeInsets.all(30.0),
                     color: Colors.amberAccent,
-                    child: const Text('BOO!!!!!!!!!!!')),
+                    child: const CircleAvatar(
+                      backgroundImage: AssetImage(
+                          'images/repository-open-graph-template.png'),
+                    )),
                 SizedBox(
                   width: 20.0,
                 ),
                 Container(
-                    height: double.infinity,
-                    width: 100,
-                    margin: EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
-                    padding: EdgeInsets.all(30.0),
-                    color: Colors.deepOrangeAccent,
-                    child: const Text('BOO  22!!!!!!!!!!!')),
+                  height: double.infinity,
+                  width: 100,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.deepOrangeAccent,
+                  child: const Text(
+                    'BOOOOOOO test',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Aboreto'),
+                  ),
+                ),
               ],
             ),
           )),
