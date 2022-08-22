@@ -93,6 +93,21 @@ class SecondScreen extends StatelessWidget {
                         fontFamily: 'Aboreto'),
                   ),
                 ),
+                Container(
+                  height: double.infinity,
+                  width: 100,
+                  margin:
+                  EdgeInsets.symmetric(vertical: 50.0, horizontal: 10.0),
+                  padding: EdgeInsets.all(30.0),
+                  color: Colors.green,
+                  child: Row(
+                    children: <Widget>[
+                      Icon(Icons.bluetooth_searching_sharp,
+                          size: 50.0
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           )),
